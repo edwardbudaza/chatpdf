@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "export NODE_OPTIONS='--max-old-space-size=8192' && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -11,6 +11,7 @@
   "dependencies": {
     "@clerk/nextjs": "^4.23.5",
     "@neondatabase/serverless": "^0.6.0",
+    "@pinecone-database/pinecone": "^0.1.6",
     "@radix-ui/react-slot": "^1.0.2",
     "@tanstack/react-query": "^4.35.0",
     "@types/node": "20.5.9",
@@ -26,8 +27,10 @@
     "drizzle-orm": "^0.28.6",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
+    "langchain": "^0.0.141",
     "lucide-react": "^0.274.0",
     "next": "13.4.19",
+    "pdf-parse": "^1.1.1",
     "pg": "^8.11.3",
     "postcss": "8.4.29",
     "react": "18.2.0",
@@ -38,5 +41,8 @@
     "tailwindcss": "3.3.3",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "prettier": "3.0.3"
   }
 }
